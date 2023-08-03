@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint_rootview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/_20sdp">
+
+    <ImageView
+        android:id="@+id/img_img"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_150sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:adjustViewBounds="true"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/txt_Profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:includeFontPadding="false"
+        android:text="Login"
+        android:textColor="@color/textcolor"
+        android:textSize="@dimen/_20sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_img" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linear_no_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Profile">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txt_fullname"
+            style="@style/LoginTextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:boxStrokeWidth="@dimen/_1sdp"
+            app:boxStrokeWidthFocused="@dimen/_1sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_phone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:hint="enter_phone_number"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textCursorDrawable="@null"
+                android:textSize="@dimen/_15ssp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txt_crePass"
+        style="@style/LoginTextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_13sdp"
+        app:boxStrokeWidth="@dimen/_1sdp"
+        app:boxStrokeWidthFocused="@dimen/_1sdp"
+        app:endIconMode="custom"
+        app:layout_constraintTop_toBottomOf="@+id/linear_no_layout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_crePass"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:hint="enter_Password"
+            android:inputType="textPassword"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/_15ssp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/txt_dontrecive"
+        app:layout_constraintTop_toBottomOf="@+id/txt_crePass"
+
+
+        >
+
+        <ImageView
+            android:id="@+id/img_login"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_65sdp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/login_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </LinearLayout>
+
+
+    <!--
+        <TextView
+            android:id="@+id/txt_goasguest"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            android:fontFamily="@font/calibri_bold"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="GO AS GUEST"
+            android:textColor="@color/textColorSecondary"
+            android:textSize="@dimen/_13sdp"
+            android:background="@drawable/loginfeild_bg"
+            app:layout_constraintTop_toBottomOf="@+id/img_submit"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="@+id/img_submit"
+            app:layout_constraintEnd_toEndOf="@+id/img_submit"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            />
+    -->
+
+
+    <LinearLayout
+        android:id="@+id/txt_dontrecive"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+
+        <TextView
+            android:id="@+id/txt_dontrecive1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="Dont_have_an_account"
+            android:textColor="@color/textColorSecondary"
+            android:textSize="@dimen/_11sdp"
+
+            />
+
+        <TextView
+            android:id="@+id/txt_signin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingLeft="@dimen/_5sdp"
+            android:text="ign_Up_here"
+            android:textColor="@color/txt_resend"
+            android:textSize="@dimen/_12ssp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
