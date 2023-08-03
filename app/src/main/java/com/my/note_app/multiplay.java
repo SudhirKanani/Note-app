@@ -9,9 +9,5 @@ public class multiplay {
         return super.equals(obj);
     }
 
-    @NonNull
-    @Override
-    protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
-    }
+
 }
